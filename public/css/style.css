@@ -1,0 +1,56 @@
+body {
+  background-image: url('../images/bg.jpg');
+  background-position: top left;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.asteroid {
+  position: absolute;
+  top: 30vh;
+  right: 30vw;
+  background: url('../images/asteroid.png') center no-repeat;
+  background-size: 10vw;
+  width: 10vw;
+  height: 10vw;
+  animation: rotate 15s infinite linear;
+}
+
+.spaceship {
+  position: absolute;
+  top: 85vh;
+  right: 85vw;
+  background: url('../images/spaceship2.png') center no-repeat;
+  background-size: 7vw;
+  width: 7vw;
+  height: 7vw;
+  animation: move 5s infinite linear;
+}
+
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg)
+  }
+  100% {
+    transform: rotate(359deg)
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translate(0vw, 0vh) rotate(0deg)
+  }
+  10% {
+    transform: translate(0vw, 0vh) rotate(180deg)
+  }
+  45% {
+    transform: translate(50vw, -50vh) rotate(180deg)
+  }
+  55% {
+    transform: translate(50vw, -50vh) rotate(0deg)
+  }
+  100% {
+    transform: translate(0vw, 0vh)
+  }
+}

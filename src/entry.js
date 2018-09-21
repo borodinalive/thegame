@@ -1,5 +1,7 @@
 'use strict';
 
+import '../public/css/style.css';
+
 import Asteroid from './models/Asteroid';
 
 function addAsteroid(asteroidModel) {

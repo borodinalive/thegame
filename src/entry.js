@@ -22,7 +22,7 @@ function addAsteroid(asteroidModel) {
 document.addEventListener('DOMContentLoaded', addChildren);
 
 function addChildren() {
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < 6; i++) {
     let asteroid = new Asteroid('asteroid_' + i);
     addAsteroid(asteroid);
     console.log(asteroid);

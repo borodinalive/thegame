@@ -16,6 +16,8 @@ function addAsteroid(asteroidModel) {
   asteroid.style.width = size;
   asteroid.style.backgroundSize = size;
 
+  asteroid.style.animationDirection = Math.round(Math.random() * 10) % 2 == 0 ? 'reverse' : 'normal';
+
   document.body.appendChild(asteroid);
 }
 

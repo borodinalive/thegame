@@ -10,7 +10,7 @@ const NODE_ENV = process.env.NODE_ENV || 'development';
 module.exports = {
   mode: NODE_ENV,
   entry: {
-    app: [__dirname + '/src/entry.js', 'webpack-hot-middleware/client']
+    app: [__dirname + '/src/entry.js', 'webpack-hot-middleware/client?reload=true']
   },
   output: {
     filename: 'thegame.js',

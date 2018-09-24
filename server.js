@@ -14,10 +14,15 @@ const compiler = webpack(config);
 const resolve = (file) => path.resolve(__dirname, file);
 const serve = (path) => express.static(resolve(path));
 
-app.use(webpackDevMiddleware(compiler, {
-  publicPath: '/'
-}));
-app.use(webpackHotMiddleware(compiler));
+const options = {
+  contentBase: './dist',
+  hot: true,
+  publicPath: '/',
+  host: 'localhost'
+};
+
+app.use(webpackDevMiddleware(compiler, options));
+app.use(webpackHotMiddleware(compiler, options));
 app.use(morgan(':remote-addr [:date[clf]] :method :url :status :res[content-length] - :response-time ms'));
 app.use('/public', express.static('./public'));
 

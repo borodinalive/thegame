@@ -3,11 +3,13 @@
 export default AsteroidPositionService;
 
 class AsteroidPositionService {
-    constructor(divider) {
-        this.divider = divider;
-    }
+  constructor(divider) {
+    this.divider = divider;
+  }
 
-    setAsteroidPosition() {}
+  setAsteroidPosition() {
+  }
 
-    getAsteroidPosition() {}
+  getAsteroidPosition() {
+  }
 }

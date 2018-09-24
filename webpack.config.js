@@ -1,6 +1,5 @@
 'use strict';
 
-const path = require('path');
 const webpack = require('webpack');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -10,7 +9,7 @@ const NODE_ENV = process.env.NODE_ENV || 'development';
 module.exports = {
   mode: NODE_ENV,
   entry: {
-    app: [__dirname + '/src/entry.js', 'webpack-hot-middleware/client?reload=true']
+    app: [__dirname + '/src/entry.js', 'webpack-hot-middleware/client?reload=true'],
   },
   output: {
     filename: 'thegame.js',
@@ -27,14 +26,14 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
-          {loader: "style-loader"},
+          {loader: 'style-loader'},
           {
             loader: 'css-loader',
             options: {
-              url: false
-            }
-          }
-        ]
+              url: false,
+            },
+          },
+        ],
       },
       // {
       //   test: /\.(png|svg|jpg|gif)$/,
@@ -47,9 +46,9 @@ module.exports = {
 
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'The Game'
+      title: 'The Game',
     }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
-  ]
+  ],
 };

@@ -18,15 +18,26 @@ body {
   animation: rotate 15s infinite linear;
 }
 
-.spaceship {
+.shuttle {
   position: absolute;
   top: 85vh;
-  right: 85vw;
+  left: 15vw;
+  z-index: 999;
   background: url('/public/images/spaceship2.png') center no-repeat;
   background-size: 7vw;
   width: 7vw;
   height: 7vw;
-  animation: move 5s infinite linear;
+}
+
+.station {
+  position: absolute;
+  bottom: 0px;
+  left: -20px;
+  z-index: 1000;
+  background: url('/public/images/mother-ship.png') center no-repeat;
+  background-size: 25vw;
+  width: 25vw;
+  height: 15vw;
 }
 
 

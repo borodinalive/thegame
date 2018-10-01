@@ -1,3 +1,7 @@
+'use strict';
+
+import createAsteroid from '../dom/createAsteroid.js';
+
 class Asteroid {
   constructor(name) {
     this.name = name;
@@ -9,6 +13,10 @@ class Asteroid {
       y: 30 + Math.round(Math.random() * 50),
     };
     this.resources = Math.round(Math.floor(Math.random() * 20) * this.size / 10);
+  }
+
+  createInDom() {
+    createAsteroid(this);
   }
 }
 

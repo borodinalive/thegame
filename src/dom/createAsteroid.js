@@ -3,6 +3,7 @@
 function createAsteroid(asteroidModel) {
   let asteroid = document.createElement('div');
   asteroid.className = 'asteroid';
+  asteroid.setAttribute('id', asteroidModel.name);
 
   asteroid.style.top = asteroidModel.coords.y + 'vh';
   asteroid.style.left = asteroidModel.coords.x + 'vw';

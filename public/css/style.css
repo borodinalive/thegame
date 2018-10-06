@@ -5,6 +5,7 @@ body {
   background-position: top left;
   background-size: cover;
   background-repeat: no-repeat;
+  overflow: hidden;
 }
 
 .asteroid {
@@ -27,12 +28,11 @@ body {
   background-size: 7vw;
   width: 7vw;
   height: 7vw;
+  transition: all 3s ease-in-out;
 }
 
 .station {
   position: absolute;
-  bottom: 0px;
-  left: -20px;
   z-index: 1000;
   background: url('/public/images/mother-ship.png') center no-repeat;
   background-size: 25vw;

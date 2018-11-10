@@ -3,7 +3,7 @@
 export default class AsteroidCoordService {
   constructor(dementsions) {
     this.layout = {
-      fractions: {x, y},
+      fractions: { x, y },
       grid: [],
     };
     let x = dementsions && dementsions[0] || 3;
@@ -32,8 +32,8 @@ export default class AsteroidCoordService {
     let randomIndex = Math.round(Math.random() * (length - 1));
     let gridItem = this.layout.grid.splice(randomIndex, 1)[0];
     return {
-      x: gridItem.x + Math.round(Math.random() * this.layout.fractions.x /2),
-      y: gridItem.y + Math.round(Math.random() * this.layout.fractions.y /2),
+      x: gridItem.x + Math.round(Math.random() * this.layout.fractions.x / 2),
+      y: gridItem.y + Math.round(Math.random() * this.layout.fractions.y / 2),
     };
   }
 }
